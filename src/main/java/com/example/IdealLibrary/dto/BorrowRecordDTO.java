@@ -1,20 +1,27 @@
-package com.example.IdealLibrary.entity;
+package com.example.IdealLibrary.dto;
 
-import jakarta.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-public class BorrowRecord {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class BorrowRecordDTO {
     private Long id;
-
     private Long userId;
     private Long bookId;
     private LocalDate borrowDate;
     private LocalDate returnDate;
     private Double bookPrice;
+
+    // Default constructor
+    public BorrowRecordDTO() {}
+
+    // Constructor with parameters
+    public BorrowRecordDTO(Long id, Long userId, Long bookId, LocalDate borrowDate, LocalDate returnDate, Double bookPrice) {
+        this.id = id;
+        this.userId = userId;
+        this.bookId = bookId;
+        this.borrowDate = borrowDate;
+        this.returnDate = returnDate;
+        this.bookPrice = bookPrice;
+    }
 
     // Getter and Setter for id
     public Long getId() {

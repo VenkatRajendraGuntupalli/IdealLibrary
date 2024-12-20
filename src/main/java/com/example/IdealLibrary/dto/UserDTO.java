@@ -1,17 +1,17 @@
-package com.example.IdealLibrary.entity;
-
-import jakarta.persistence.*;
-
-@Entity
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+package com.example.IdealLibrary.dto;
+public class UserDTO {
     private Long id;
-
     private String name;
     private String email;
-    private String password;
+    private String password; // Optional if sensitive data needs to be excluded.
+
+    // Constructor
+    public UserDTO(Long id, String name, String email, String password) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+    }
 
     // Getter and Setter for id
     public Long getId() {
