@@ -75,4 +75,4 @@ The application's flow is depicted below:
 ### Steps to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/IdealLibrary.git
+   https://github.com/VenkatRajendraGuntupalli/IdealLibrary.git
